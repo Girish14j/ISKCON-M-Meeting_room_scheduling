@@ -11,15 +11,40 @@
     padding: 20px;
   }
 
-  header {
+  .header2 {
     max-width: 800px; /* Match the width of .container2 */
-    margin: 0 auto; /* Center align the header */
+    margin: 20px;
     padding: 20px; /* Add padding similar to .container2 */
     background-color: white; /* Optional: To match the style of .container2 */
     border-radius: 10px; /* Optional: To match the style of .container2 */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow like .container2 */
     margin-top: 20px;
 }
+
+/* Initially hide the hamburger on larger screens */
+.hamburger {
+  display: none;
+}
+
+/* Show hamburger button on smaller screens */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Show hamburger button */
+  }
+
+  .nav-links {
+    display: none; /* Hide the navigation links by default */
+    flex-direction: column;
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex; /* Show navigation links when active */
+  }
+}
+
 
 
   .button-group {
@@ -90,7 +115,7 @@
 
 .container2 {
     max-width: 800px;
-    margin: 20px auto;
+    margin: 20px;
     padding: 20px;
     background-color: white;
     border-radius: 10px;
@@ -99,7 +124,6 @@
 
 .container3 {
   position: absolute;
-  top: 20px; /* Adjust this for vertical spacing */
   right: 20px; /* Adjust this for horizontal spacing */
   width: 250px; /* Optional: Set a fixed width for the card */
   background-color: white; /* Optional: Ensure visibility against the background */
@@ -167,3 +191,95 @@
     font-size: 16px;
     color: #333;
 }
+
+
+/* General styles (already provided above) */
+
+/* Media Queries for Mobile Users */
+@media only screen and (max-width: 768px) {
+  /* body {
+    padding: 10px; /* Reduce padding for mobile */
+  /* }  */
+
+  .header2, .container2 {
+    max-width: 100%; /* Use full width for mobile */
+    margin: 10px; /* Reduce margin */
+    padding: 15px; /* Adjust padding */
+    box-shadow: none; /* Optional: Remove shadow to simplify design */
+    border-radius: 5px; /* Reduce border radius */
+  }
+
+  .button-group {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px; /* Adjust gap */
+    padding: 10px; /* Adjust padding */
+  }
+
+  .button {
+    width: 100%; /* Make buttons take full width */
+    font-size: 16px; /* Slightly larger text for touch devices */
+    padding: 12px; /* Adjust padding for easier touch */
+  }
+
+  .button.arrow {
+    font-size: 16px; /* Adjust font size for arrows */
+    padding: 10px; /* Adjust padding for easier tap */
+  }
+
+  .container3 {
+    position: static; /* Disable absolute positioning on mobile */
+    width: 100%; /* Full width for better alignment */
+    margin: 10px 0; /* Add margin for spacing */
+    box-shadow: none; /* Optional: Remove shadow for simplicity */
+    border-radius: 5px; /* Adjust border radius */
+  }
+
+  .options {
+    gap: 5px; /* Reduce gap for compact layout */
+  }
+
+  .radio-container {
+    flex-direction: row; /* Keep horizontal layout for options */
+    padding: 10px; /* Adjust padding */
+    gap: 8px; /* Adjust gap */
+  }
+
+  .radio-container .custom-radio {
+    width: 16px; /* Smaller radio button */
+    height: 16px; /* Smaller radio button */
+  }
+
+  .label-text {
+    font-size: 14px; /* Smaller text for mobile */
+  }
+}
+
+/* Media Queries for Extra Small Devices (e.g., phones <480px) */
+@media only screen and (max-width: 480px) {
+  .header2, .container2 {
+    padding: 10px; /* Reduce padding further */
+  }
+
+  .button {
+    font-size: 14px; /* Smaller font size */
+    padding: 10px; /* Adjust padding */
+  }
+
+  .container3 {
+    padding: 10px; /* Reduce padding for small screens */
+  }
+
+  .radio-container {
+    padding: 8px; /* Reduce padding */
+  }
+
+  .radio-container .custom-radio {
+    width: 14px; /* Smaller radio button */
+    height: 14px; /* Smaller radio button */
+  }
+
+  .label-text {
+    font-size: 12px; /* Smaller text for extra small devices */
+  }
+}
+
