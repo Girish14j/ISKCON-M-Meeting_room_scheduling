@@ -26,10 +26,37 @@ window.onload = function () {
           <div class="divider"></div>
           <p>${timeSlot} - ${location}</p>
           <div class="divider"></div>
-          <button style="padding: 10px 70px 10px 70px;" class="button">Continue</button>
+          <a href="/Summary/summary.html" style="top=20px">
+        <button class="button">Continue</button>
+      </a>
         </div>
       `;
 
-    document.querySelector('body').insertAdjacentHTML('beforeend', cardHTML);
+      const container = document.querySelector('#cardContainer');
+      container.insertAdjacentHTML('beforeend', cardHTML);
   }
 }
+
+
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+        navLinks.classList.remove('active');
+    }
+});
+
+// Close menu when clicking a link
+navLinks.querySelectorAll('.nav-btn').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+    });
+});
+
+
