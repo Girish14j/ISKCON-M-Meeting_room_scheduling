@@ -340,7 +340,7 @@
     background-color: #1a1a1a;
   }
   
-  @media (max-width: 640px) {
+  @media (max-width: 768px) {
     .booking-page .venue-details {
       flex-direction: column;
     }
@@ -355,3 +355,24 @@
     display: flex;
     gap: 10px;
   }
+  /* General styles */
+.hamburger {
+  display: none; /* Hide by default (on desktop) */
+}
+
+/* Media Queries for Mobile Users */
+@media only screen and (max-width: 768px) {
+  .hamburger {
+    display: block; /* Show hamburger menu on mobile devices */
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* Optional: Style the hamburger icon */
+  .hamburger-icon {
+    width: 30px;
+    height: 30px;
+    stroke: #333;
+  }
+}
