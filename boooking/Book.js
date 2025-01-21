@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     overlay.className = 'mobile-menu-overlay';
     document.body.appendChild(overlay);
   
-    const menuButton = document.querySelector('.mobile-menu-button');
+    const menuButton = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
   
     function toggleMenu() {
@@ -25,4 +25,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
     });
+    
   });

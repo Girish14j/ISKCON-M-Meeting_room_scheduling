@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="Admin.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.css">
+</head>
+<body>
+  <div class="modify">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="logo">
+        <img src="https://iskconmumbaipull-21250.kxcdn.com/bi_theme_snippets/static/src/img/logo-black-header.png" alt="Logo">
+      </div>
+      <ul class="nav-links">
+        <li><a href="#"><i class="lucide lucide-bar-chart"></i></a></li>
+        <li><a href="#"><i class="lucide lucide-calendar"></i></a></li>
+        <li><a href="#"><i class="lucide lucide-file-text"></i></a></li>
+        <li><a href="#"><i class="lucide lucide-book"></i></a></li>
+        <li><a href="#"><i class="lucide lucide-settings"></i></a></li>
+        <li><a href="#"><i class="lucide lucide-lock"></i></a></li>
+      </ul>
+    </div>
+
+    <!-- Main Dashboard -->
+    <div class="Admin">
+      <div class="dashcards">
+        <h1 class="head">DASHBOARD</h1>
+        <p class="stats">Quick Stats</p>
+
+        <!-- Cards -->
+        <div class="row">
+          <div class="column">
+            <div class="card">
+              <h3>Total Bookings</h3>
+              <p>245</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <h3>Pending Approvals</h3>
+              <p id="alerted">12</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <h3>Meetings Held this Month</h3>
+              <div class="stattt">
+                <p>24</p>
+                <i class="lucide lucide-trending-up" style="color: green; font-size: 45px;"></i>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <h3>Feedback Rating</h3>
+              <div class="stattt">
+                <p>46%</p>
+                <i class="lucide lucide-trending-down" style="color: red; font-size: 35px;"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mid-Menu -->
+        <div class="mid-menu">
+          <p class="titles" id="selected">Bookings</p>
+          <br>
+          <p class="titles">Enquiries</p>
+          <br>
+          <p class="titles">Services</p>
+          <br>
+        </div>
+        <hr>
+
+        <!-- Booking Requests -->
+        <div class="request">
+          <div class="rows">
+            <!-- Request Card -->
+            <div class="rcolumn">
+              <div class="rcard">
+                <h3 class="client">Radhanath Swami Das</h3>
+                <div class="req-info">
+                  <div class="lefty">
+                    <p>
+                      Meeting Room No.<br>
+                      101
+                    </p>
+                    <p class="down">
+                      Date<br>
+                      25 Jan 2024
+                    </p>
+                  </div>
+                  <div class="righty">
+                    <p>
+                      Parallel Req<br>
+                      None
+                    </p>
+                    <p class="down">
+                      Time<br>
+                      11:00 - 12:00
+                    </p>
+                  </div>
+                </div>
+                <hr>
+                <div class="keys">
+                  <button class="choice">Accept Booking</button>
+                  <button>Decline</button>
+                </div>
+              </div>
+            </div>
+            <!-- Repeat similar request cards as needed -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Admin Profile Section -->
+    <div class="Admin-card">
+      <div class="container-card">
+        <div class="first">
+          <div class="search">
+            <input type="text" id="search-form" class="search-ip" placeholder="     |  Search Keyword">
+          </div>
+          <div><i class="lucide lucide-bell-dot"></i></div>
+        </div>
+        <div class="admin-pro">
+          <p class="admin-info">
+            Jai Shree Krishna,<br>
+            <span id="admin-name">Jaganath!</span>
+          </p>
+          <img class="admin-pic" src="/assets/assets/admin.jpg" alt="Admin">
+        </div>
+
+        <!-- Reminders -->
+        <div class="reminders">
+          <h1 class="rtitle">Reminder</h1>
+          <div class="reminder">
+            <i class="lucide lucide-alert-circle" style="color: #f35162;"></i>
+            <p class="rcontent">
+              Booking Reminder<br>
+              <span class="sub0">Clear all your pending approvals</span>
+            </p>
+          </div>
+          <div class="reminder">
+            <i class="lucide lucide-alert-circle" style="color: #f35162;"></i>
+            <p class="rcontent">
+              Upcoming Booking<br>
+              <span class="sub0">Take a look at Upcoming Events</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

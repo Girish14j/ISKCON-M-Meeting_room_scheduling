@@ -126,48 +126,27 @@ function closeBooking() {
 renderDates();
 renderTimeSlots();
 
-// Function to handle slot clicks 
-/*
-function handleSlotClick(event) {
-  const slot = event.target;
-  const slotStatus = slot.dataset.status;
-  const slotTime = slot.dataset.time;
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
 
-
-  if (slotStatus === "available" || slotStatus === "pending") {
-    const cardSection = document.getElementById("card-section");
-
-    if (document.querySelector(`[data-time="${slotTime}"]`)) {
-      alert("This time slot is already added to the card section.");
-      return;
-    }
-
-    const card = document.createElement("div");
-    card.classList.add("card");
-    card.innerHTML = `
-    <p>Time Slot: ${slotTime}</p>
-    <button class="remove-card">Remove</button>
-  `;
-    card.dataset.time = slotTime;
-
-
-    card.querySelector(".remove-card").addEventListener("click", () => {
-      card.remove();
-    });
-
-    cardSection.appendChild(card);
-  } else {
-    // Show alert for red slots (booked)
-    alert("This time slot is not allowed to be added.");
-  }
-}
-
-
-document.querySelectorAll(".time-slot").forEach((slot) => {
-  slot.addEventListener("click", handleSlotClick);
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
 });
 
-*/
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+        navLinks.classList.remove('active');
+    }
+});
+
+// Close menu when clicking a link
+navLinks.querySelectorAll('.nav-btn').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+    });
+});
+
 
 function continueBooking() {
   const hallName = "Meeting Hall 101";
