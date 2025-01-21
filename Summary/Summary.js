@@ -18,3 +18,4 @@ navLinks.querySelectorAll('.nav-btn').forEach(link => {
         navLinks.classList.remove('active');
     });
 });
+

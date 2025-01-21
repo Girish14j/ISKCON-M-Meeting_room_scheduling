@@ -69,56 +69,29 @@
     <button class="button">Charity Drives</button>
     <button class="button arrow">→</button>
   </div>
-  <div class="container3">
+  <!-- <div class="container3">
     <img src="https://www.architectandinteriorsindia.com/cloud/2022/11/23/Vurve-Alwarpet-by-RSDA-3.jpg" alt="logo"
       height="100px" width="200px">
     <p>Meeting Hall 101</p>
     <div class="service-divider"></div>
-    <p>Scripture Readings - Ground floor, Building A</p>
-    <!-- class name is converted to the divider to the service-divider due to name conflict -->
+    <p id="selected-content">Scripture Readings - Ground floor, Building A</p>
     <div class="service-divider"></div>
     <a href="/Summary/summary.html" style="padding: 10px 70px 10px 70px;">
       <button class="button">Continue</button>
     </a>
-  </div>
-  <div>
-    <h3 style="padding-left: 400px">Spiritual Discourses</h3>
-  </div>
-  <div class="container2">
-    <div class="options">
-      <label class="radio-container">
-        <input type="radio" name="discourse" checked>
-        <span class="custom-radio"></span>
-        <span class="label-text">Scriptural Readings</span>
-      </label>
-      <label class="radio-container">
-        <input type="radio" name="discourse">
-        <span class="custom-radio"></span>
-        <span class="label-text">Philosophical Debates</span>
-      </label>
-      <label class="radio-container">
-        <input type="radio" name="discourse">
-        <span class="custom-radio"></span>
-        <span class="label-text">Guest Lectures by Spiritual Leaders</span>
-      </label>
-      <label class="radio-container">
-        <input type="radio" name="discourse">
-        <span class="custom-radio"></span>
-        <span class="label-text">Thematic Sermons</span>
-      </label>
-      <label class="radio-container">
-        <input type="radio" name="discourse">
-        <span class="custom-radio"></span>
-        <span class="label-text">Q&A Sessions</span>
-      </label>
-      <label class="radio-container">
-        <input type="radio" name="discourse">
-        <span class="custom-radio"></span>
-        <span class="label-text">Children's Spiritual Education Programs</span>
-      </label>
-    </div>
-  </div>
+  </div>  -->
+  <div id="cardContainer"></div>
+  <script src="/ISKCON-M-Meeting_room_scheduling/Select_services/Select_services.js"></script>
 
+  
+  <script>
+    // JavaScript to update container3 content
+    function updateContent(selectedText) {
+      const contentElement = document.getElementById('selected-content');
+      contentElement.textContent = selectedText;
+    }
+  </script>
+  
      <!-- Footer section -->
      <footer class="footer">
       <div class="footer-top">
