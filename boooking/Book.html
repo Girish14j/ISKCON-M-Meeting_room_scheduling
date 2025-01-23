@@ -10,43 +10,79 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="header">       
-        <div class="header-content">         
-          <img src="https://iskconmumbaipull-21250.kxcdn.com/bi_theme_snippets/static/src/img/logo-black-header.png"
-          alt="ISKCON Juhu Logo" class="logo">                  
-          
-          <div class="search-container">           
-            <div class="search-wrapper">             
-              <svg xmlns="http://www.w3.org/2000/svg"
-                   class="search-icon"
-                   viewBox="0 0 24 24"                
-                   fill="none"
-                   stroke="currentColor"
-                   stroke-width="2"
-                   stroke-linecap="round"
-                   stroke-linejoin="round">               
-                <circle cx="11" cy="11" r="8"></circle>               
-                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>             
-              </svg>             
-              <input type="text"
-                     placeholder="Search for a Hall or Venue"
-                     class="search-input">           
-            </div>         
-          </div>          
-      
-          <!-- Hamburger button moved outside nav-links -->
-          <button class="hamburger">
-            <svg viewBox="0 0 24 24" class="hamburger-icon" stroke="currentColor" fill="none">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+    <header class="header">
+      <div class="header-content">
+        <!-- ISKCON Logo -->
+        <img src="https://iskconmumbaipull-21250.kxcdn.com/bi_theme_snippets/static/src/img/logo-black-header.png"
+             alt="ISKCON Juhu Logo" class="logo">
+  
+        <!-- Search Box -->
+        <div class="search-container">
+          <div class="search-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 class="search-icon"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 stroke-linecap="round"
+                 stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg>
-          </button>
-          <!-- Navigation links -->
-          <nav class="nav-links hidden">
-            <a href="#" class="nav-link">Login</a>
-            <a href="#" class="nav-link">Sign Up</a>
-          </nav>       
-        </div>     
-      </header>
+            <input type="text" placeholder="Search for a Hall or Venue" class="search-input">
+          </div>
+        </div>
+  
+        <!-- Hamburger Button -->
+        <button class="hamburger">
+          <svg viewBox="0 0 24 24" class="hamburger-icon" stroke="currentColor" fill="none">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+  
+        <!-- Navigation Links -->
+        <nav class="nav-links">
+          <a href="#" class="nav-link login-trigger">Login</a>
+        </nav>
+      </div>
+    </header>
+  
+    <!-- Overlay and Login Form -->
+    <div class="overlay hidden">
+      <div class="container">
+        <input type="checkbox" id="check">
+        <div class="login form">
+          <header>Login</header>
+          <form action="#">
+            <input type="text" placeholder="Enter your email" required>
+            <input type="password" placeholder="Enter your password" required>
+            <a href="#">Forgot password?</a>
+            <input type="button" class="button" value="Login">
+          </form>
+          <div class="signup">
+            <span>Don't have an account?
+              <label for="check">Signup</label>
+            </span>
+          </div>
+        </div>
+  
+        <div class="registration form">
+          <header>Signup</header>
+          <form action="#">
+            <input type="text" placeholder="Enter your email" required>
+            <input type="password" placeholder="Create a password" required>
+            <input type="password" placeholder="Confirm your password" required>
+            <input type="button" class="button" value="Signup">
+          </form>
+          <div class="signup">
+            <span>Already have an account?
+              <label for="check">Login</label>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Sub-header -->
     <div class="sub-header">

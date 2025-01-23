@@ -120,8 +120,10 @@ function switchView(view) {
 // Close booking (placeholder)
 function closeBooking() {
   alert("Closing the booking page!");
-}
+  // Redirect to a different page
+  window.location.href = "/boooking/Book.html"
 
+}
 // Initialize
 renderDates();
 renderTimeSlots();
