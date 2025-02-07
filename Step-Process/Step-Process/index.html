@@ -36,7 +36,7 @@
           <!-- Calendar View -->
           <div class="calendar-view" id="calendar-view" style="display: none;">
             <div class="calendar"> 📅 <p>Calendar view implementation would go here</p>
-              <p id="selected-date">Selected Date: January 1, 2025</p>
+              <p id="selected-date">Selected Date: <span id="current-date"></span></p>
             </div>
           </div>
         </div>
@@ -47,7 +47,7 @@
             <div class="venue-info">
               <h3>Meeting Hall 101</h3>
               <p class="venue-location">Ground Floor, Building A</p>
-              <p class="booking-time" id="booking-time"> Monday, January 1 - <span id="time-slot-span">3:00pm to
+              <p class="booking-time" id="booking-time"> <span id="booking-day">Monday, January 1</span> - <span id="time-slot-span">3:00pm to
                   4:30pm</span>
               </p>
             </div>
@@ -62,6 +62,9 @@
 
   </div>
   <script src="./index.js"></script>
+  <script>
+
+  </script>
 </body>
 
 </html>

@@ -74,6 +74,11 @@ function handleSlotClick(slot) {
   // Update the booking time in the UI
   const bookingTimeElement = document.getElementById("booking-time");
   const timeSlotSpan = document.getElementById("time-slot-span");
+  bookingTimeElement.textContent = `${new Date().toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric"
+  })} ${slot.time} to ${getNextSlotTime(slot.time)}`
 
   // Update the time slot display
   timeSlotSpan.textContent = `${slot.time} to ${getNextSlotTime(slot.time)}`;
